@@ -1,0 +1,11 @@
+{
+  "name": "bibliotecajs",
+  "version": "1.0.0",
+  "description": "Biblioteca que acessa arquivos de texto em Markdown, captura os links espalhados pelo texto e testa eles para ver se ainda estão funcionando.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Linda Souza",
+  "license": "ISC"
+}

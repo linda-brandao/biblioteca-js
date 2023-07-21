@@ -1,7 +1,7 @@
 import fs from 'fs';
 import chalk from 'chalk';
 
-function extraiLinks(texto) {
+function capturaLinks(texto) {
     const regexExpressaoRegular = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
     const capturas = [...texto.matchAll(regexExpressaoRegular)];
     const resultados = capturas.map(captura => ({ [captura[1]]: captura[2] }));
@@ -17,7 +17,7 @@ async function pegaArquivo(caminhoDoArquivo) {
     try {
         const encoding = 'utf-8';
         const texto = await fs.promises.readFile(caminhoDoArquivo, encoding);
-        return extraiLinks(texto);
+        return capturaLinks(texto);
     } catch (erro) {
         trataErro(erro)
     }

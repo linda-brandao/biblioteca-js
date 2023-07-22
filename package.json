@@ -2,10 +2,16 @@
   "name": "bibliotecajs",
   "version": "1.0.0",
   "description": "Biblioteca que acessa arquivos de texto em Markdown, captura os links espalhados pelo texto e testa eles para ver se ainda estão funcionando.",
-  "main": "index.js",
+  "keywords": ["markdown", "URL"],
+  "main": "./cli.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "node ./src/cli.js"
   },
   "author": "Linda Souza",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
 }
